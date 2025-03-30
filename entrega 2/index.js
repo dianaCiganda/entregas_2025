@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var celular_1 = require("./celular");
+var primerCelular = new celular_1.Celular("Samsung", "A5", "64GB");
+var segundoCelular = new celular_1.Celular("Motorola", "E6", "32GB", "Android 6");
+var tercerCelular = new celular_1.Celular("Xiaomi", "Readme 13", "Android 12", undefined);
+var cuartoCelular = new celular_1.Celular("Samsung", "A12", "Android 13", undefined, undefined);
+var quintoCelular = new celular_1.Celular("LG", "K6", "Android 8", undefined, undefined);
+console.log(primerCelular.getMostrarInfo());
+console.log(segundoCelular.getMostrarInfo());
+console.log(tercerCelular.getMostrarInfo());
+console.log(cuartoCelular.getMostrarInfo());
+console.log(quintoCelular.getMostrarInfo());
+quintoCelular.setEncenderApagar(true);
