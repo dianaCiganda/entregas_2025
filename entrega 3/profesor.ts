@@ -1,4 +1,4 @@
-import { Alumno } from "./entrega 3/alumno";
+import { Alumno } from "./alumno";
 
 export class Profesor{
    private nombre:string;
