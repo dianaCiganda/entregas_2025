@@ -15,12 +15,12 @@ let profesores: Profesor[] = [profesor1, profesor2,profesor3];
 let escuela: Escuela = new Escuela(alumnos, profesores);
 
 // Matricular un nuevo alumno (alumno4) en la escuela
-escuela.setMatricularAlumno([alumno4]);
-escuela.setMatricularAlumno([alumno2]);
+escuela.matricularAlumno([alumno4]);
+escuela.matricularAlumno([alumno2]);
 console.log(alumno3.getComprobarNota());
 console.log(alumno1.getComprobarNota());
-console.log(escuela.getExpulsarAlumno(alumnos));
-escuela.setContratarProfesor([profesor3]);
-escuela.setContratarProfesor([profesor4]);
-console.log(escuela.getDespedirProfesor(profesores));
+console.log(escuela.expulsarAlumno(alumnos));
+escuela.contratarProfesor([profesor3]);
+escuela.contratarProfesor([profesor4]);
+console.log(escuela.despedirProfesor(profesores));
 

@@ -15,7 +15,7 @@ export class Escuela {
         this.alumno = pAlumno;
         this.profesor = pProfesor;
     }
-    public setMatricularAlumno(pAlumno: Alumno[]): void {
+    public matricularAlumno(pAlumno: Alumno[]): void {
         pAlumno.forEach(alumno => {
             console.log("Verificando alumno:", alumno.getNombre(), alumno.getApellido());
             let existe = this.alumno.some(a =>
@@ -34,7 +34,7 @@ export class Escuela {
     }
 
 
-    public getExpulsarAlumno(pAlumno: Alumno[]): string {
+    public expulsarAlumno(pAlumno: Alumno[]): string {
         let expulsados = pAlumno.filter(e => e.getAmonestaciones() >= 5);
         //.filter()	Devuelve un nuevo array con los elementos que cumplen la condición.
         if (expulsados.length === 0) {
@@ -48,7 +48,7 @@ export class Escuela {
         //El método .join() convierte un array en una cadena de texto, separando los elementos con el separador especificado.
     }
 
-    public setContratarProfesor(pProfesor: Profesor[]): void {
+    public contratarProfesor(pProfesor: Profesor[]): void {
         pProfesor.forEach(profesor => {
             console.log("Verificando profesor:", profesor.getNombre(), profesor.getApellido());
             let existe = this.profesor.some(p =>
@@ -65,7 +65,7 @@ export class Escuela {
         });
 
     }
-    public getDespedirProfesor(pProfesor: Profesor[]): string {
+    public despedirProfesor(pProfesor: Profesor[]): string {
         let despedidos = pProfesor.filter(e => e.getIncumplimientos() >= 15);
 
         if (despedidos.length === 0) {
