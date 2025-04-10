@@ -1,0 +1,16 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var moduloWifi_1 = require("./moduloWifi");
+var smartHeladera_3 = require("./smartHeladera");
+var conModuloWifi = new moduloWifi_1.ModuloWifi(300, 444);
+var smartHeladera_1 = new smartHeladera_3.SmartHeladera(conModuloWifi, 10, "Samsung", "A456", true);
+var smartHeladera_2 = new smartHeladera_3.SmartHeladera(conModuloWifi, 2, "noblex", "estrella", false);
+smartHeladera_1.mostrarInfo();
+smartHeladera_1.encender();
+smartHeladera_1.conectarAiNternet();
+smartHeladera_1.cambiarTemperatura(15);
+console.log("----------------------------------------");
+smartHeladera_2.mostrarInfo();
+smartHeladera_2.apagar();
+smartHeladera_2.conectarAiNternet();
+smartHeladera_2.cambiarTemperatura(2);
