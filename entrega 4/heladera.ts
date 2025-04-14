@@ -5,13 +5,11 @@ export class Heladera extends Electrodomestico {
         super(pMarca, pModelo, pEstaEncendido)
         this.temperatura = pTemperatura;
     }
-    public cambiarTemperatura(PTemperatura: number) {
-        if (this.temperatura > 8 && this.estaEncendido) {
-            this.temperatura = 8;
-            console.log(`se ha bajado la temperatura en ${PTemperatura-this.temperatura} grados`);
-        } else if (this.temperatura < 5 && this.estaEncendido) {
-            this.temperatura = 6;
-            console.log(`se ha subido la temperatura en ${this.temperatura-PTemperatura} grados`);
-        }
+    public cambiarTemperatura(pTemperatura: number) {
+        if (pTemperatura && this.estaEncendido==true) {
+            this.temperatura =pTemperatura;
+            console.log(`se ha cambiado la temperatura en ${pTemperatura} grados`);
+       
     }
+}
 }

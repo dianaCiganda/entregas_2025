@@ -7,7 +7,7 @@ export class SmartHeladera extends Heladera {
         this.wiFi = pWifi;
 
     }
-    public conectarAiNternet() {
+    public iternet() {
         if (this.wiFi && this.estaEncendido==true ) {
             console.log(`Conectado a internet a una velocidad de ${this.wiFi.getVelocidad()} Mbps`);
         }

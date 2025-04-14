@@ -7,10 +7,10 @@ let smartHeladera_1:SmartHeladera=new SmartHeladera(conModuloWifi,10,"Samsung", 
 let smartHeladera_2:SmartHeladera=new SmartHeladera(conModuloWifi,2,"noblex", "estrella",false);
 smartHeladera_1.mostrarInfo();
 smartHeladera_1.encender();
-smartHeladera_1.conectarAiNternet();
+smartHeladera_1.iternet();
 smartHeladera_1.cambiarTemperatura(15);
 console.log("----------------------------------------");
 smartHeladera_2.mostrarInfo();
 smartHeladera_2.apagar();
-smartHeladera_2.conectarAiNternet();
+smartHeladera_2.iternet();
 smartHeladera_2.cambiarTemperatura(2);
