@@ -11,15 +11,19 @@ constructor(pNombreCurso:string,pDescripcionCurso:string,pResponsableCurso:Profe
     this.responsableCurso=pResponsableCurso;
     this.listaParticipantes=pListaParticipantes;
 }
-    public mostrarLista(): void {
-        this.listaParticipantes.sort((c, d) =>
-            c.getApellido().localeCompare(d.getApellido(), 'es', { sensitivity: 'base' })
-        );
-    
-        console.log(`Curso: ${this.nombreCurso}\nDescripción: ${this.descripcionCurso}
-    Responsable: ${this.responsableCurso.getNombre()} ${this.responsableCurso.getApellido()}
-    Listado de alumnos: ${this.listaParticipantes.map(e => `\n ${e.getNombre()} ${e.getApellido()}`).join('')}`);
-    }
+public mostrarLista(): void {
+    this.listaParticipantes.sort((c, d) =>
+        c.getApellido().localeCompare(d.getApellido(), 'es', { sensitivity: 'base' })
+    );
+
+    console.log(
+        `Curso: ${this.nombreCurso}\n` +
+        `Descripción: ${this.descripcionCurso}\n` +
+        `Responsable: ${this.responsableCurso.getNombre()} ${this.responsableCurso.getApellido()}\n` +
+        `Listado de alumnos:\n` +
+        `${this.listaParticipantes.map(e => `  - ${e.getNombre()} ${e.getApellido()}`).join('\n')}`
+    );
+}
     public getNombreCurso(): string {
         return this.nombreCurso;
     }
