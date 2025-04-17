@@ -1,0 +1,10 @@
+Ejercicio(herencia): Empleados
+Crea una clase Empleado con las propiedades nombre, apellido y salario.
+ Agrega los métodos 
+ aumentar_salario y reducir_salario que permitan ajustar el salario de un empleado.
+Luego, crea dos clases adicionales que hereden de Empleado: Gerente y Trabajador. Cada clase debe tener propiedades y métodos únicos para su tipo de empleado.
+Por ejemplo, la clase Gerente podría tener una propiedad adicional área y un método asignar_tareas. La clase Trabajador podría tener una propiedad adicional horas_trabajadas y un método solicitar_dia_libre.
+Por último, crea una clase adicional EmpleadoTemporal que herede de la clase Trabajador. Esta clase debe tener una propiedad adicional fecha_fin_contrato y un método verificar_vencimiento_contrato que retorne True si el contrato del empleado está a punto de vencer.
+
+
+-------------------------------------------------------------
