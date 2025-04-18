@@ -9,9 +9,9 @@ let camion1 = new Camion("Mercedes", "Actros", "GHI789", 5000, true);
 let camion2 = new Camion("Volvo", "FH", "JKL012", 6000, false);
 let moto1 = new Moto("Yamaha", "YZF-R3", "MNO345", 300, false);
 let moto2 = new Moto("Honda", "CBR500R", "PQR678", 500, true);  
+let registro = new RegistroAutomotor();
 
 console.log(auto1.toString());
-let registro = new RegistroAutomotor();
 registro.agregarVehiculo(auto1);
 registro.agregarVehiculo(auto2);
 registro.agregarVehiculo(camion1);
