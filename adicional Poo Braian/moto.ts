@@ -1,8 +1,8 @@
 import { Vehiculo } from "./vehiculo";
 export class Moto extends Vehiculo {
    private esCiclomotor: boolean;
-   constructor(pMarca: string, pModelo: string, pPatente: string, pClindrada: number, pEsCiclomotor: boolean) {
-       super(pMarca, pModelo, pPatente, pClindrada);
+   constructor(pMarca: string, pModelo: string, pPatente: string, pCilindrada: number, pEsCiclomotor: boolean) {
+       super(pMarca, pModelo, pPatente, pCilindrada);
        this.esCiclomotor = pEsCiclomotor;
    }
     getEsCiclomotor(): boolean {
@@ -12,6 +12,6 @@ export class Moto extends Vehiculo {
          this.esCiclomotor = pEsCiclomotor;
     }
     public toString(): string {
-         return `Marca: ${this.getMarca()}, Modelo: ${this.getModelo()}, Patente: ${this.getPatente()}, Cilindrada: ${this.getClindrada()}, Es Ciclomotor: ${this.esCiclomotor}`;
+         return `Marca: ${this.getMarca()}, Modelo: ${this.getModelo()}, Patente: ${this.getPatente()}, Cilindrada: ${this.getCilindrada()}, Es Ciclomotor: ${this.esCiclomotor}`;
     }
 }

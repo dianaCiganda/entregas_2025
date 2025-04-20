@@ -15,6 +15,6 @@ export class Auto extends Vehiculo {
     }
 
     public toString(): string {
-        return `Marca: ${this.getMarca()}, Modelo: ${this.getModelo()}, Patente: ${this.getPatente()}, Cantidad de Puertas: ${this.cantidadPuertas}`;
+        return `Marca: ${this.getMarca()}, Modelo: ${this.getModelo()}, Patente: ${this.getPatente()}, Cilindrada: ${this.getCilindrada()}Cantidad de Puertas: ${this.cantidadPuertas}`;
     }
 }

@@ -1,8 +1,8 @@
 import { Vehiculo } from "./vehiculo";
 export class Camion extends Vehiculo {                      
     private tieneAcoplado: boolean;
-    constructor(pMarca: string, pModelo: string, pPatente: string, pClindrada: number, pTieneAcoplado: boolean) {
-        super(pMarca, pModelo, pPatente, pClindrada);
+    constructor(pMarca: string, pModelo: string, pPatente: string, pCilindrada: number, pTieneAcoplado: boolean) {
+        super(pMarca, pModelo, pPatente, pCilindrada);
         this.tieneAcoplado = pTieneAcoplado;
     }
     getTieneAcoplado(): boolean {
@@ -12,6 +12,6 @@ export class Camion extends Vehiculo {
         this.tieneAcoplado = pTieneAcoplado;
     }
     public toString(): string {
-        return `Marca: ${this.getMarca()}, Modelo: ${this.getModelo()}, Patente: ${this.getPatente()}, Cilindrada: ${this.getClindrada()}, Tiene Acoplado: ${this.tieneAcoplado}`;
+        return `Marca: ${this.getMarca()}, Modelo: ${this.getModelo()}, Patente: ${this.getPatente()}, Cilindrada: ${this.getCilindrada()}, Tiene Acoplado: ${this.tieneAcoplado}`;
     }
 }

@@ -1,13 +1,13 @@
 export class Vehiculo {
-    private marca: string;
-    private modelo: string;
-    private patente: string;
-    private clindrada: number;
-    constructor(pMarca: string, pModelo: string, pPatente: string, pClindrada: number) {
+    protected marca: string;
+    protected modelo: string;
+    protected patente: string;
+    protected cilindrada: number;
+    constructor(pMarca: string, pModelo: string, pPatente: string, pCilindrada: number) {
         this.marca = pMarca;
         this.modelo = pModelo;
         this.patente = pPatente;
-        this.clindrada = pClindrada;
+        this.cilindrada = pCilindrada;
     }
     getMarca(): string {
         return this.marca;
@@ -18,8 +18,8 @@ export class Vehiculo {
     getPatente(): string {
         return this.patente;
     }       
-    getClindrada(): number {
-        return this.clindrada;
+    getCilindrada(): number {
+        return this.cilindrada;
     }
     setMarca(pMarca: string): void {
         this.marca = pMarca;
@@ -28,12 +28,12 @@ export class Vehiculo {
         this.modelo = pModelo;
     }
     setPatente(pPatente: string): void {
-        this.patente = pPatente;
+        this.patente= pPatente;
     }
-    setClindrada(pClindrada: number): void {
-        this.clindrada = pClindrada;
+    setClindrada(pCilindrada: number): void {
+        this.cilindrada = pCilindrada;
     }
    public toString(): string {
-        return `Marca: ${this.marca}, Modelo: ${this.modelo}, Patente: ${this.patente}, Cilindrada: ${this.clindrada}`;
+        return `Marca: ${this.marca}, Modelo: ${this.modelo}, Patente: ${this.patente} Cilindrada: ${this.cilindrada}`;
     }
 }

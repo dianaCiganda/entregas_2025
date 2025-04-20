@@ -1,22 +1,44 @@
 [
   {
+    "marca": "Toyota",
+    "modelo": "Corolla",
     "patente": "ABC123",
-    "marca": "Toyota"
+    "cilindrada": 1600,
+    "cantidadPuertas": 4
   },
   {
+    "marca": "Ford",
+    "modelo": "Fiesta",
     "patente": "DEF456",
-    "marca": "Ford"
+    "cilindrada": 1400,
+    "cantidadPuertas": 5
   },
   {
+    "marca": "Mercedes",
+    "modelo": "Actros",
     "patente": "GHI789",
-    "marca": "Mercedes"
+    "cilindrada": 5000,
+    "tieneAcoplado": true
   },
   {
+    "marca": "Volvo",
+    "modelo": "FH",
     "patente": "JKL012",
-    "marca": "Volvo"
+    "cilindrada": 6000,
+    "tieneAcoplado": false
   },
   {
+    "marca": "Yamaha",
+    "modelo": "YZF-R3",
     "patente": "MNO345",
-    "marca": "Yamaha"
+    "cilindrada": 300,
+    "esCiclomotor": false
+  },
+  {
+    "marca": "Honda",
+    "modelo": "CBR500R",
+    "patente": "PQR678",
+    "cilindrada": 500,
+    "esCiclomotor": true
   }
 ]
