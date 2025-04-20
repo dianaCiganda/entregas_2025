@@ -1,0 +1,22 @@
+[
+  {
+    "patente": "ABC123",
+    "marca": "Toyota"
+  },
+  {
+    "patente": "DEF456",
+    "marca": "Ford"
+  },
+  {
+    "patente": "GHI789",
+    "marca": "Mercedes"
+  },
+  {
+    "patente": "JKL012",
+    "marca": "Volvo"
+  },
+  {
+    "patente": "MNO345",
+    "marca": "Yamaha"
+  }
+]
