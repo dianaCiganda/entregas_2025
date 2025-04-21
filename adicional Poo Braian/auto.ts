@@ -6,6 +6,20 @@ export class Auto extends Vehiculo {
         this.cantidadPuertas = pCantidadPuertas;
 
     }
+    puertas(): void {
+        if (this.cantidadPuertas == 5) {
+            console.log("Es un auto de 5 puertas");
+        } else if (this.cantidadPuertas == 4) {
+
+            console.log("Es un auto de 4 puertas");
+        } else if (this.cantidadPuertas == 3) {
+
+            console.log("Es un auto de 3 puertas");
+        }
+    }
+
+
+
     getCantidadPuertas(): number {
         return this.cantidadPuertas;
     }

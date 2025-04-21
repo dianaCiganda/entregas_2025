@@ -11,29 +11,29 @@ export class Vehiculo {
     }
     getMarca(): string {
         return this.marca;
-    }           
+    }
     getModelo(): string {
         return this.modelo;
     }
     getPatente(): string {
         return this.patente;
-    }       
+    }
     getCilindrada(): number {
         return this.cilindrada;
     }
     setMarca(pMarca: string): void {
         this.marca = pMarca;
-    }                   
+    }
     setModelo(pModelo: string): void {
         this.modelo = pModelo;
     }
     setPatente(pPatente: string): void {
-        this.patente= pPatente;
+        this.patente = pPatente;
     }
     setClindrada(pCilindrada: number): void {
         this.cilindrada = pCilindrada;
     }
-   public toString(): string {
+    public toString(): string {
         return `Marca: ${this.marca}, Modelo: ${this.modelo}, Patente: ${this.patente} Cilindrada: ${this.cilindrada}`;
     }
 }
