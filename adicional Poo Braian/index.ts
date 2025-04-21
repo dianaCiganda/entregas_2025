@@ -26,7 +26,7 @@ console.log("buscando vehiculos: ");
 console.log(registro.buscarVehiculo("DEF456"));
 console.log(registro.buscarVehiculo("XYZ123"));
 console.log(registro.buscarVehiculo("ABC123"));
-//registro.eliminarVehiculo("PQR678");
+registro.eliminarVehiculo("PQR678");
 registro.mostrarVehiculos();
 camion1.esConAcoplado();
 camion2.esConAcoplado();

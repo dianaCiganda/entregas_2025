@@ -22,5 +22,6 @@ export class Camion extends Vehiculo {
     }
     public toString(): string {
         return `Marca: ${this.getMarca()}, Modelo: ${this.getModelo()}, Patente: ${this.getPatente()}, Cilindrada: ${this.getCilindrada()}, Tiene Acoplado: ${this.tieneAcoplado}`;
+        
     }
 }
