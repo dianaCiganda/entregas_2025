@@ -8,17 +8,16 @@ export class Empleado {
         this.salario = pSalario;
     }
     public aumentar_salario(): void {
-       if (this.salario < 100000) {
+        if (this.salario < 100000) {
             console.log(`${this.nombre} ${this.apellido} su salario de: ${this.salario}, se ha aumentado a ${this.salario + 10000}`);
         }
-    } 
+    }
     public disminuir_salario(): void {
-if (this.salario > 100000) {
-            
-            console.log(`${this.nombre} ${this.apellido} su salario de: ${this.salario}, se ha reducido a ${this.salario-1000
-            }`);
-        }
+        if (this.salario > 100000) {
 
+            console.log(`${this.nombre} ${this.apellido} su salario de: ${this.salario}, se ha reducido a ${this.salario - 1000
+                }`);
+        }
 
     }
     getNombre(): string {
