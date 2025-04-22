@@ -1,13 +1,14 @@
 import { IPago } from "./interfaces";
 import { MetodosDePago } from "./metodosDepago";
 export class MercadoPago extends MetodosDePago implements IPago {
-
-    constructor(pMonto: number, pEntidadEmisora: string, pNombreTitular: string, pCbu_cvu: number) {
+private alias: string;
+    constructor(pMonto: number, pEntidadEmisora: string, pNombreTitular: string, pCbu_cvu: number,pAlias: string) {
         super(pMonto, pEntidadEmisora, pNombreTitular, pCbu_cvu);
+        this.alias = pAlias;
     }
 
     procesarPago(): void {
-        console.log(`el pago desde Mercado Pago del cvu: ${this.getCbu_cvu()} del titular ${this.getNombreTitular()} por el monto de ${this.getMonto()} fue procesado`);
+        console.log(`el pago desde el alias ${this.alias} Mercado Pago del cvu: ${this.getCbu_cvu()} del titular ${this.getNombreTitular()} por el monto de ${this.getMonto()} fue procesado`);
     }
     cancelarPago(): void {
         console.log(`el pago desde Mercado Pago del cvu: ${this.getCbu_cvu()} del titular ${this.getNombreTitular()} por el monto de ${this.getMonto()} fue cancelado`);

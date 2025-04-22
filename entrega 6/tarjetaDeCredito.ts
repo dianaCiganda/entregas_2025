@@ -1,13 +1,14 @@
 import { IPago } from "./interfaces";
 import { MetodosDePago } from "./metodosDepago";
 export class TarjetaDeCredito extends MetodosDePago implements IPago  {
-  
-    constructor(pMonto: number, pEntidadEmisora: string, pNombreTitular: string, pCbu_cvu: number) {
+  private numeroTarjeta: number;
+    constructor(pMonto: number, pEntidadEmisora: string, pNombreTitular: string, pCbu_cvu: number, pNumeroTarjeta: number) {
         super(pMonto, pEntidadEmisora, pNombreTitular, pCbu_cvu);
+        this.numeroTarjeta = pNumeroTarjeta;
     }
 
     procesarPago(): void {
-        console.log(`el pago de la tarjeta de ${this.getEntidadEmisora()} corresposndiente al CBU: ${this.getCbu_cvu()} del titular ${this.getNombreTitular()} por el monto de ${this.getMonto()} fue procesado`);    
+        console.log(`el pago de la tarjeta de ${this.getEntidadEmisora()} con ${this.numeroTarjeta} corresposndiente al CBU: ${this.getCbu_cvu()} del titular ${this.getNombreTitular()} por el monto de ${this.getMonto()} fue procesado`);    
 
     }
     cancelarPago(): void {
