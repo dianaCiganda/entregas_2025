@@ -1,0 +1,3 @@
+Al código trabajado en clase con la interfaz
+IPago, implementarle las clases Transferencia y
+MercadoPago
