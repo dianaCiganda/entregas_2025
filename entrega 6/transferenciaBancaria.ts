@@ -1,21 +1,33 @@
-import { MetodosDePago } from "./metodosDepago";
-import { IPago } from "./interfaces";
-export class TransferenciaBancaria extends MetodosDePago implements IPago {
-private numeroDeCuenta: number;
 
-    constructor(pMonto: number, pEntidadEmisora: string, pNombreTitular: string, pCbu_cvu:number,pNumeroDeCuenta: number) {
-        super(pMonto, pEntidadEmisora, pNombreTitular, pCbu_cvu);
+import { IPago } from "./IPago";
+export class TransferenciaBancaria implements IPago {
+private monto:number;
+private nombreTitular:string;
+private numeroDeCuenta: number;
+private cvu_cbu:number;
+
+
+    constructor(pMonto: number, pNombreTitular: string, pCbu_cvu:number,pNumeroDeCuenta: number, pcvu_cbu:number) { 
+        this.monto=pMonto;
         this.numeroDeCuenta = pNumeroDeCuenta;
+        this.nombreTitular=pNombreTitular;
+        this.numeroDeCuenta=pNumeroDeCuenta;
+        this.cvu_cbu=pcvu_cbu;
+        
   
     }
 procesarPago(): void {      
-        console.log(`el pago de la transferencia bancaria desde el CBU: ${this.getCbu_cvu()} del titular ${this.getNombreTitular()} por el monto de ${this.getMonto()} fue procesado`);
+        console.log(`el pago de la transferencia bancaria desde el CBU: ${this.cvu_cbu} del titular ${this.nombreTitular}\n por el monto de ${this.monto} fue procesado`);
     }
     cancelarPago(): void {  
-        console.log(`el pago de la transferencia bancaria desde el CBU: ${this.getCbu_cvu()} del titular ${this.getNombreTitular()} por el monto de ${this.getMonto()} fue cancelado`);
+        console.log(`el pago de la transferencia bancaria desde el CBU: ${this.cvu_cbu} del titular ${this.nombreTitular}\n por el monto de ${this.monto} fue cancelado`);
     }
     generarRecibo(): void { 
-        console.log(`el recibo de la transferencia bancaria a ${this.getCbu_cvu()} del titular ${this.getNombreTitular()} por el monto de ${this.getMonto()} fue generado desde el numero de cuenta ${this.numeroDeCuenta}`);
+        console.log(`el recibo de la transferencia bancaria a ${this.cvu_cbu} del titular ${this.nombreTitular}\n por el monto de ${this.monto} fue generado `);
+        
+    }
+    mostrarNumeroDeCuenta(): void {  
+        console.log(`el numero de cuenta de la transferencia bancaria del titular ${this.nombreTitular} es ${this.numeroDeCuenta}`);
     }
     
 }

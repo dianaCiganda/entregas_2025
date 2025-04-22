@@ -1,0 +1,30 @@
+import { TarjetaDeCredito } from "./tarjetaDeCredito";
+import { TransferenciaBancaria } from "./transferenciaBancaria";
+import { MercadoPago } from "./mercadoPago";
+const pago1:TarjetaDeCredito = new TarjetaDeCredito(1000, "Visa", "Juan Perez", 123456789, 1234567890123456);
+const pago2:TransferenciaBancaria = new TransferenciaBancaria(2000, "Maria Lopez", 987654321, 123456789, 987654321);
+const pago3:MercadoPago = new MercadoPago(3000, "Pedro Garcia", 456789123, "alias123");
+
+pago1.procesarPago();
+console.log("------------------------------------");
+pago1.descripcionDeTarjeta();
+console.log("------------------------------------");
+pago1.cancelarPago();
+console.log("------------------------------------");
+pago1.generarRecibo();
+console.log("------------------------------------");
+pago2.procesarPago();
+console.log("------------------------------------");
+pago2.cancelarPago();
+console.log("------------------------------------");
+pago2.generarRecibo();
+console.log("------------------------------------");
+pago2.mostrarNumeroDeCuenta();
+console.log("------------------------------------");
+pago3.procesarPago();
+console.log("------------------------------------");
+pago3.cancelarPago();
+console.log("------------------------------------");
+pago3.generarRecibo()
+console.log("------------------------------------");
+pago3.mostrarAlias();  

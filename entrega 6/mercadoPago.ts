@@ -1,19 +1,28 @@
-import { IPago } from "./interfaces";
-import { MetodosDePago } from "./metodosDepago";
-export class MercadoPago extends MetodosDePago implements IPago {
+import { IPago } from "./IPago";
+
+export class MercadoPago implements IPago {
 private alias: string;
-    constructor(pMonto: number, pEntidadEmisora: string, pNombreTitular: string, pCbu_cvu: number,pAlias: string) {
-        super(pMonto, pEntidadEmisora, pNombreTitular, pCbu_cvu);
+private cvu_cbu:number;
+private nombreTitular:string;
+private monto:number;
+    constructor(pMonto: number, pNombreTitular: string, pCbu_cvu: number,pAlias: string) {
+       
         this.alias = pAlias;
+        this.cvu_cbu = pCbu_cvu;
+        this.nombreTitular = pNombreTitular;    
+        this.monto = pMonto;
     }
 
     procesarPago(): void {
-        console.log(`el pago desde el alias ${this.alias} Mercado Pago del cvu: ${this.getCbu_cvu()} del titular ${this.getNombreTitular()} por el monto de ${this.getMonto()} fue procesado`);
+        console.log(`el pago de Mercado Pago del cvu: ${this.cvu_cbu}\n del titular ${this.nombreTitular} por el monto de ${this.monto} fue procesado`);
     }
     cancelarPago(): void {
-        console.log(`el pago desde Mercado Pago del cvu: ${this.getCbu_cvu()} del titular ${this.getNombreTitular()} por el monto de ${this.getMonto()} fue cancelado`);
+        console.log(`el pago desde Mercado Pago del cvu: ${this.cvu_cbu}\n del titular ${this.nombreTitular} por el monto de ${this.monto} fue cancelado`);
     }
     generarRecibo(): void {
-        console.log(`el recibo de Mercado Pago del titular ${this.getNombreTitular()} por el monto de ${this.getMonto()} fue generado`);
+        console.log(`el recibo de Mercado Pago del titular ${this.nombreTitular} \npor el monto de ${this.monto} fue generado`);
     }
+    mostrarAlias(): void {
+        console.log(`el alias de Mercado Pago del titular ${this.nombreTitular} es ${this.alias}`);
+}
 }
