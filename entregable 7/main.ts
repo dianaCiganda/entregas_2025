@@ -12,4 +12,6 @@ gato.moverse();
 perro.moverse();   
 gato.getNombre();
 console.log(perro.getNombre());
+console.log(gato.getNombre());
+
 
