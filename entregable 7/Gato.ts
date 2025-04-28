@@ -4,6 +4,6 @@ export class Gato extends Animal {
         console.log(`miau`); 
     }
     tipoDieta(): string {
-        return "Pescado y lacteos";
+        return "Pescado y lacteos.";
     }
 }
